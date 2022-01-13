@@ -4,13 +4,28 @@
     <link rel="stylesheet" href="style.css">
     </head>
     <body>
+<div class="body1">
         <h1>Simple Interest Calculator</h1>
 
-        Amount <input type="number"  id="principal">  <br/>
-        Rate <input type="range" min=1 max=20 step=0.5 id="rate">  <br/>
-        No. of Years
-        Interest : <span id="result"></span><br>
-
-        <button onclick="compute()">Compute Interest</button>
+        Amount  <input type="number"  id="principal">  <br/>
+        Rate <input type="range" min=1 max=20 step=0.5 id="rate" onchange="change()" value=3.5 name="rangeInput"> <output id="rateVal" name="amount" for="range">3.5</output>%  <br/>
+        No. of Years <select name="years" id="years">
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+ <option value="5">5</option>
+</select>
+        <div>
+        <button onclick="compute()" class="compute">Compute Interest</button>
+</div>
+<br/>
+<div id="cont1">
+<div>If you deposit<span id="pval">p</span></div>
+<div >at an interest rate of<span id="rval"></span>%</div>
+<div>You will receive an amount of <span id="aval">am</span></div>
+<div>in the year  <span id="yval">year</span>
+</div>
     </body>
+</div>
 </html>
